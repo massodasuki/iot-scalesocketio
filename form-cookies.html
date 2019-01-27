@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Vital Weight Summary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="css/blue.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/controlfrog.css" rel="stylesheet" media="screen">   
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="tooltips/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+
+
+
+
+  <script>var themeColour = 'black';</script>
+
+<script>
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function putCookie() {
+    //var vUser=getCookie("cUser");
+
+    var vNama=getCookie("cNama");
+    var vSex=getCookie("cSex");
+    var vUmur=getCookie("cUmur");
+    var vTinggi=getCookie("cTinggi");
+    var vBerat=getCookie("cBerat");
+    var vBMR=getCookie("cBMR");
+    var vWeight=getCookie("cWeight");
+    var vBMI=getCookie("cBMI");
+    var vFat=getCookie("cFat");
+    var vVisFat=getCookie("cVisFat");
+    var vMuscle=getCookie("cMuscle");
+    var vBone=getCookie("cBone");
+    var vWater=getCookie("cWater");
+    var vSuhu=getCookie("cSuhu");
+    var vPump=getCookie("cPump");
+    var vSystolic=getCookie("cSystolic");
+    var vDiastolic=getCookie("cDiastolic");
+    var vPulse=getCookie("cPulse");
+
+
+
+    //document.getElementById("myUser").value = vUser;
+
+    document.getElementById("myNama").value = vNama;
+    document.getElementById("mySex").value = vSex;
+    document.getElementById("myUmur").value = vUmur;
+    document.getElementById("myTinggi").value = vTinggi;
+    document.getElementById("myBerat").value = vBerat;
+    document.getElementById("myBMR").value = vBMR;
+    document.getElementById("myWeight").value = vWeight;
+    document.getElementById("myBMI").value = vBMI;
+    document.getElementById("myFat").value = vFat;
+    document.getElementById("myVisFat").value = vVisFat;
+    document.getElementById("myMuscle").value = vMuscle;
+    document.getElementById("myBone").value = vBone;
+    document.getElementById("myWater").value = vWater;
+    document.getElementById("mySuhu").value = vSuhu;
+    document.getElementById("myPump").value = vPump;
+    document.getElementById("mySystolic").value = vSystolic;
+    document.getElementById("myDiastolic").value = vDiastolic;
+    document.getElementById("myPulse").value = vPulse;
+
+    //alert("Hello");
+
+
+}
+
+</script>
+
+<script>
+/*
+function readOnly() {
+
+    document.getElementById("myText").readOnly = true;
+    document.getElementById("myNama").readOnly = true;
+    document.getElementById("mySex").readOnly = true;
+    document.getElementById("myUmur").readOnly = true;
+    document.getElementById("myTinggi").readOnly = true;
+    document.getElementById("myBerat").readOnly = true;
+    document.getElementById("myBMR").readOnly = true;
+    document.getElementById("myWeight").readOnly = true;
+    document.getElementById("myBMI").readOnly = true;
+    document.getElementById("myFat").readOnly = true;
+    document.getElementById("myVisFat").readOnly = true;
+    document.getElementById("myMuscle").readOnly = true;
+    document.getElementById("myBone").readOnly = true;
+    document.getElementById("myWater").readOnly = true;
+    document.getElementById("mySuhu").readOnly = true;
+    document.getElementById("myPump").readOnly = true;
+    document.getElementById("mySystolic").readOnly = true;
+    document.getElementById("myDiastolic").readOnly = true;
+    document.getElementById("myPulse").readOnly = true;
+    document.getElementById("myText").readOnly = true;
+    document.getElementById("myText").readOnly = true;
+    
+
+}*/
+</script>
+
+</head>
+<body class="black" onload="putCookie()">
+
+
+<h1 class="col-md-12 text-center">Profail Kesihatan</h1>
+
+
+<div class="content">            
+          <table class="table table">
+  <tr>
+    <td>NAMA</td>
+    <td><input type="text" id="myNama" readonly="readonly" ></td>
+  </tr>
+  <tr>
+    <td>JANTINA</td>
+    <td><input type="text" id="mySex" readonly="readonly"></td>
+  </tr>
+  <tr>
+    <td>UMUR</td>
+    <td><input type="text" id="myUmur" readonly="readonly"></td>
+  </tr>
+   <tr>
+    <td>TINGGI</td>
+    <td><input type="text" id="myTinggi" readonly="readonly"></td>
+  </tr>
+  <tr>
+    <td>BERAT</td>
+    <td><input type="text" id="myBerat"  readonly="readonly"></td>
+  </tr>
+   <tr>
+    <td>KADAR METABOLISME ASAS
+(BASAL METABOLIC RATE)</td>
+    <td><input type="text" id="myBMR" readonly="readonly"></td>
+  </tr>
+  <tr>
+    <td>BERAT (WEIGHT)</td>
+    <td><input type="text" id="myWeight" readonly="readonly"></td>
+  </tr>
+  <tr>
+    <td>INDEKS JISIM BADAN (BODY MASS INDEX)</td>
+    <td><input type="text" id="myBMI" readonly="readonly">%</td>
+  </tr>
+   <tr>
+    <td>KADAR LEMAK (FAT RATE)</td>
+    <td><input type="text" id="myFat" readonly="readonly">%</td>
+  </tr>
+  <tr>
+    <td> VISCERAL FAT</td>
+    <td><input type="text" id="myVisFat" readonly="readonly">%</td>
+  </tr>
+  <tr>
+    <td> JISIM OTOT (MUSCLE MASS)</td>
+    <td><input type="text" id="myMuscle" readonly="readonly">%</td>
+  </tr>
+   <tr>
+    <td>JISIM TULANG (BONE MASS)</td>
+    <td><input type="text" id="myBone" readonly="readonly">%</td>
+  </tr>
+  <tr>
+    <td>KANDUGAN AIR (WATER CONTENT)</td>
+    <td><input type="text" id="myWater" readonly="readonly">%</td>
+  </tr>
+  <tr>
+    <td>SUHU (Temperature)</td>
+    <td><input type="text" id="mySuhu" readonly="readonly"></td>
+  </tr>
+   <tr>
+    <td>PUMP PRESSURE (mmHg)</td>
+    <td><input type="text" id="myPump" readonly="readonly"></td>
+  </tr>
+  <tr>
+    <td>SYSTOLIC (mmHg)</td>
+    <td><input type="text" id="mySystolic" readonly="readonly"></td>
+  </tr>
+  <tr>
+    <td>DIASTOLIC (mmHg)</td>
+    <td><input type="text" id="myDiastolic" readonly="readonly"></td>
+  </tr>
+   <tr>
+    <td>PULSE (bpm)</td>
+    <td><input type="text" id="myPulse" readonly="readonly"></td>
+  </tr>
+</table>
+</div>
+
+</body>
+</html>

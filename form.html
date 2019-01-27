@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function addCookies() {  
+
+    //var vUser= "Kalau";
+  
+    var vNama=document.getElementById("uName").value;
+    var vSex=document.getElementById("uGender").value;
+    var vUmur=document.getElementById("uAge").value;
+    var vTinggi=document.getElementById("uHeight").value;
+    var vBerat=document.getElementById("uWeight").value;
+    var vBMR=document.getElementById("uBMR").value;
+    var vWeight=document.getElementById("cf-gauge-1-m").value;
+    var vBMI=document.getElementById("cf-gauge-2-m").value;
+    var vFat=document.getElementById("svp-1").value;
+    var vVisFat=document.getElementById("svp-2").value;
+    var vMuscle=document.getElementById("svp-3").value;
+    var vBone=document.getElementById("svp-4").value;
+    var vWater=document.getElementById("svp-5").value;
+    var vSuhu=document.getElementById("temp").value;
+    var vPump=document.getElementById("pump").value;
+    var vSystolic=document.getElementById("systolic").value;
+    var vDiastolic=document.getElementById("diastolic").value;
+    var vPulse=document.getElementById("pulse").value;
+
+    
+
+    //setCookie("cUser",  vUser, 30);
+
+
+    setCookie("cNama",  vNama, 30);
+    setCookie("cSex",  vSex, 30);
+    setCookie("cUmur",  vUmur, 30);
+    setCookie("cTinggi",  vTinggi, 30);
+    setCookie("cBerat",  vBerat, 30);
+    setCookie("cBMR",  vBMR, 30);
+    setCookie("cWeight",  vWeight, 30);
+    setCookie("cBMI",  vBMI, 30);
+    setCookie("cFat",  vFat, 30);
+    setCookie("cVisFat",  vVisFat, 30);
+    setCookie("cMuscle",  vMuscle, 30);
+    setCookie("cBone",  vBone, 30);
+    setCookie("cWater",  vWater, 30);
+    setCookie("cSuhu",  vSuhu, 30);
+    setCookie("cPump",  vPump, 30);
+    setCookie("cSystolic",  vSystolic, 30);
+    setCookie("cDiastolic",  vDiastolic, 30);
+    setCookie("cPulse",  vPulse, 30);
+
+}
+
+
+</script>
+</head>
+<body onload="addCookies()">
+</body>
+</html>
