@@ -7,6 +7,13 @@ This project is real time interface that using socket.io to emit data into Javas
 
 # User Interface
 
+![Alt text](https://user-images.githubusercontent.com/17770615/51798188-da2f4a00-2249-11e9-9ca0-4a8db9681454.JPG?raw=true "Main")
+
+Description : Bluetooth Scale
+
 
 ![Alt text](https://user-images.githubusercontent.com/17770615/51798193-e1565800-2249-11e9-91fc-70e50e8df82f.JPG?raw=true "Main")
+
+Description : Thermometer
+
 
